@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+/*
+シリコンバレー一流プログラマーが教える
+Go大全
+p60の学習
+*/
+
 func bazz() {
 	fmt.Println("bazz")
 }
