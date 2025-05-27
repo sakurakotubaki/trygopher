@@ -39,10 +39,5 @@ commit c02ea5a3f8a2b3552b042d0edd7846fff7f1831b (HEAD -> basic1-sub1, origin/bas
 
 ```mermaid
 erDiagram
-
-    ローカルリポジトリ (git) {
-        ステージングエリア (index)
-        コミット履歴 (objects)
-    }
-```
-
+    ローカルリポジトリ ||--|| ステージングエリア : contains
+    ローカルリポジトリ ||--|| コミット履歴 : contains
