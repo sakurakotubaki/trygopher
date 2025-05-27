@@ -39,8 +39,14 @@ commit c02ea5a3f8a2b3552b042d0edd7846fff7f1831b (HEAD -> basic1-sub1, origin/bas
 
 ```mermaid
 erDiagram
-    ローカルリポジトリ ||--|| ステージングエリア(index) : contains
-    ローカルリポジトリ ||--|| コミット履歴(objects) : contains
+    ローカルリポジトリ ||--|| ステージングエリア : contains
+    ローカルリポジトリ ||--|| コミット履歴 : contains
+    ステージングエリア {
+        string index
+    }
+    コミット履歴 {
+        string objects
+    }
 ```
 
 ### ブランチについて
@@ -97,6 +103,7 @@ gitGraph
     checkout main
     merge feature
 ```
+
 **図の説明：**
 1. ブランチはコミット`A`から`B`へと進んでいます。 `main`
 2. ブランチのコミット`B`から`feature`ブランチが分岐し、コミット`C`、`D`が追加されます。 `main`
@@ -132,7 +139,6 @@ gitGraph
     commit id: "② mainの変更"
     checkout main
     merge feature id: "マージコミット"
-
 ```
 
 **図の説明：**
