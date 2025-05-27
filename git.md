@@ -130,15 +130,13 @@ Gitはこれらの3つのコミットを比較します。 具体的には、
 
 ```mermaid
 gitGraph
-    commit id: "③ 共通祖先"
-    branch feature
-    branch main
-    checkout feature
-    commit id: "① featureの変更"
-    checkout main
-    commit id: "② mainの変更"
-    checkout main
-    merge feature id: "マージコミット"
+    commit id: "③ 共通祖先"      % デフォルトブランチ（例: main）上にコミット
+    branch feature             % featureブランチを現在のコミットから作成 (HEADはまだmain)
+    checkout feature           % featureブランチに切り替え
+    commit id: "① featureの変更"  % featureブランチにコミット
+    checkout main              % mainブランチに切り替え
+    commit id: "② mainの変更"     % mainブランチにコミット (①と並行)
+    merge feature id: "マージコミット" % featureブランチをmainブランチにマージ
 ```
 
 **図の説明：**
