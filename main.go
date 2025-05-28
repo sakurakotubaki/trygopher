@@ -6,13 +6,9 @@ func bazz() {
 	fmt.Println("bazz")
 }
 
-func init() {
-	bazz()
-}
-
 func main() {
 	// Slice
-	n := []int{1, 2, 3}
+	n := []int{1, 2, 3, 4, 5}
 	fmt.Println(n)
 	// 要素の追加
 	n = append(n, 100)
