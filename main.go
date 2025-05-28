@@ -2,17 +2,17 @@ package main
 
 import "fmt"
 
-func bazz() {
-	fmt.Println("bazz")
+func logger() {
+	fmt.Println("logger")
+}
+
+func loop() {
+	// 3 for loop
+	for i := 0; i < 3; i++ {
+		logger()
+	}
 }
 
 func main() {
-	// Slice
-	n := []int{1, 2, 3, 4, 5}
-	fmt.Println(n)
-	// 要素の追加
-	n = append(n, 100)
-	fmt.Println(n)
-	// 要素の出力
-	fmt.Println(n[3])
+  logger()
 }
